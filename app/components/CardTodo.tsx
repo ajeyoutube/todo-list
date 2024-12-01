@@ -12,6 +12,7 @@ import {
 
 import { Todo } from '@prisma/client'
 import DialogEdit from "./DialogEdit"
+import DialogDelete from "./DialogDelete"
 
 const CardTodo = ({ todo }: { todo: Todo }) => {
   return (
@@ -33,6 +34,7 @@ const CardTodo = ({ todo }: { todo: Todo }) => {
       </CardContent>
       <CardFooter className="flex justify-between">
         <DialogEdit todo={todo} />
+        <DialogDelete id={todo.id} />
         <Checkbox checked={todo.finished} disabled />
       </CardFooter>
     </Card>

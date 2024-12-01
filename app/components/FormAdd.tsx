@@ -31,6 +31,7 @@ const FormAdd = () => {
     defaultValues: {
       title: "",
       description: "",
+      finished: false
     },
   })
 
